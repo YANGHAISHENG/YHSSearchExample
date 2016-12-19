@@ -151,7 +151,7 @@
         emptyButton.titleLabel.font = self.searchHistoryHeader.font;
         [emptyButton setTitleColor:YHSTextColor forState:UIControlStateNormal];
         [emptyButton setTitle:@"清空" forState:UIControlStateNormal];
-        [emptyButton setImage:[UIImage imageNamed:@"YHSSearch.bundle/empty"] forState:UIControlStateNormal];
+        [emptyButton setImage:YHSSearchEmptyImage forState:UIControlStateNormal];
         [emptyButton addTarget:self action:@selector(emptySearchHistoryDidClick) forControlEvents:UIControlEventTouchUpInside];
         [emptyButton sizeToFit];
         emptyButton.yhs_width += YHSSearchMargin;

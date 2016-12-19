@@ -130,7 +130,7 @@
         // 添加分割线
         UIImageView *line = [[UIImageView alloc] initWithImage:YHSSearchSeparatorLineHorizontalImage];
         line.alpha = 0.7;
-        line.yhs_x = 0.0;
+        line.yhs_x = YHSSearchMargin;
         line.yhs_y = YHS_SEARCH_TABLE_VIEW_CELL_HEIGHT_DEFAULT-YHS_SEARCH_SEPARATOR_LINE_HEIGHT_DEFAULT;
         line.yhs_width = YHSScreenWidth;
         line.yhs_height = YHS_SEARCH_SEPARATOR_LINE_HEIGHT_DEFAULT;

@@ -47,12 +47,14 @@
 #endif
 
 
+#define YHSSearchHistoriesPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"YHSSearchHistories.plist"] // 搜索历史存储路径
+
+
 #define YHSSearchBarImage [UIImage imageNamed:@"YHSSearch.bundle/clearImage"] // 搜索条UISearchBar清除图片
 #define YHSSearchHistoryImage [UIImage imageNamed:@"YHSSearch.bundle/search_history"] // 搜索历史Cell的图片
 #define YHSSearchSuggestionImage [UIImage imageNamed:@"YHSSearch.bundle/search"] // 搜索建议时，Cell的图片
-#define YHSSearchHistoriesPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"YHSSearchHistories.plist"] // 搜索历史存储路径
-
 #define YHSSearchCloseImage [UIImage imageNamed:@"YHSSearch.bundle/close"] // 搜索Cell关闭按钮
+#define YHSSearchEmptyImage [UIImage imageNamed:@"YHSSearch.bundle/empty"] // 搜索历史清空按钮
 #define YHSSearchSeparatorLineVerticalImage [UIImage imageNamed:@"YHSSearch.bundle/cell-content-line-vertical"] // 竖直分割线图片
 #define YHSSearchSeparatorLineHorizontalImage [UIImage imageNamed:@"YHSSearch.bundle/cell-content-line-horizontal"] // 水平分割线图片
 
@@ -63,9 +65,7 @@
 UIKIT_EXTERN CGFloat const YHS_SEARCH_STATUS_NAVIGATION_BAR_HEIGHT;      // 状态栏+导航条高度(系统默认高度为64)
 UIKIT_EXTERN CGFloat const YHS_SEARCH_STATUS_BAR_HEIGHT;                 // 状态栏高度(系统默认高度为20)
 UIKIT_EXTERN CGFloat const YHS_SEARCH_NAVIGATION_BAR_HEIGHT;             // 导航条高度(系统默认高度为44)
-
 UIKIT_EXTERN CGFloat const YHS_SEARCH_SEARCH_BAR_HEIGHT;                 // 搜索框UISearchBar高度为30
-
 UIKIT_EXTERN CGFloat const YHS_SEARCH_TABLE_VIEW_CELL_HEIGHT_DEFAULT;    // 表格默认高度为44
 UIKIT_EXTERN CGFloat const YHS_SEARCH_SEPARATOR_LINE_HEIGHT_DEFAULT;     // 表格分割线高度为0.5
 
