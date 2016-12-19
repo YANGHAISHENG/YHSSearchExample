@@ -22,7 +22,6 @@
 		7D254D8E1DFA960A005581D6 /* YHSSearchConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D861DFA960A005581D6 /* YHSSearchConst.m */; };
 		7D254D8F1DFA960A005581D6 /* YHSSearchSuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D881DFA960A005581D6 /* YHSSearchSuggestionViewController.m */; };
 		7D254D901DFA960A005581D6 /* YHSSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D8A1DFA960A005581D6 /* YHSSearchViewController.m */; };
-		7D254D921DFA9696005581D6 /* YHSSearch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D254D911DFA9696005581D6 /* YHSSearch.bundle */; };
 		7D254DA11DFA986B005581D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D9D1DFA986B005581D6 /* AppDelegate.m */; };
 		7D254DA21DFA986B005581D6 /* YHSSearchExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D9F1DFA986B005581D6 /* YHSSearchExampleController.m */; };
 		7D254DA71DFA9AAC005581D6 /* YHSSearchTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254DA61DFA9AAC005581D6 /* YHSSearchTempViewController.m */; };
@@ -88,7 +87,6 @@
 		7D254D881DFA960A005581D6 /* YHSSearchSuggestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHSSearchSuggestionViewController.m; sourceTree = "<group>"; };
 		7D254D891DFA960A005581D6 /* YHSSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHSSearchViewController.h; sourceTree = "<group>"; };
 		7D254D8A1DFA960A005581D6 /* YHSSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHSSearchViewController.m; sourceTree = "<group>"; };
-		7D254D911DFA9696005581D6 /* YHSSearch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YHSSearch.bundle; sourceTree = "<group>"; };
 		7D254D9A1DFA9798005581D6 /* YHSSearchExample-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YHSSearchExample-PrefixHeader.pch"; sourceTree = "<group>"; };
 		7D254D9C1DFA986B005581D6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D254D9D1DFA986B005581D6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 		7D254D7E1DFA960A005581D6 /* YHSSearch */ = {
 			isa = PBXGroup;
 			children = (
-				7D254D911DFA9696005581D6 /* YHSSearch.bundle */,
 				7D254D841DFA960A005581D6 /* YHSSearch.h */,
 				7D254D851DFA960A005581D6 /* YHSSearchConst.h */,
 				7D254D861DFA960A005581D6 /* YHSSearchConst.m */,
@@ -407,7 +404,6 @@
 			files = (
 				7D2A158A1DF801D100FBADB9 /* LaunchScreen.storyboard in Resources */,
 				7D2A15871DF801D100FBADB9 /* Assets.xcassets in Resources */,
-				7D254D921DFA9696005581D6 /* YHSSearch.bundle in Resources */,
 				7D2A15851DF801D100FBADB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
