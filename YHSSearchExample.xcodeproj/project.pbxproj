@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7D0A47111E07D44200681868 /* YHSSearch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D0A47101E07D44200681868 /* YHSSearch.bundle */; };
+		7D0A47161E07D8DF00681868 /* YHSSearchExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0A47131E07D8DF00681868 /* YHSSearchExampleController.m */; };
+		7D0A47171E07D8DF00681868 /* YHSSearchTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0A47151E07D8DF00681868 /* YHSSearchTempViewController.m */; };
 		7D254D741DFA95DA005581D6 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D5C1DFA95DA005581D6 /* MASCompositeConstraint.m */; };
 		7D254D751DFA95DA005581D6 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D5F1DFA95DA005581D6 /* MASConstraint.m */; };
 		7D254D761DFA95DA005581D6 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D611DFA95DA005581D6 /* MASConstraintMaker.m */; };
@@ -24,8 +26,6 @@
 		7D254D8F1DFA960A005581D6 /* YHSSearchSuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D881DFA960A005581D6 /* YHSSearchSuggestionViewController.m */; };
 		7D254D901DFA960A005581D6 /* YHSSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D8A1DFA960A005581D6 /* YHSSearchViewController.m */; };
 		7D254DA11DFA986B005581D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D9D1DFA986B005581D6 /* AppDelegate.m */; };
-		7D254DA21DFA986B005581D6 /* YHSSearchExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D9F1DFA986B005581D6 /* YHSSearchExampleController.m */; };
-		7D254DA71DFA9AAC005581D6 /* YHSSearchTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254DA61DFA9AAC005581D6 /* YHSSearchTempViewController.m */; };
 		7D2A157C1DF801D100FBADB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A157B1DF801D100FBADB9 /* main.m */; };
 		7D2A15851DF801D100FBADB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A15831DF801D100FBADB9 /* Main.storyboard */; };
 		7D2A15871DF801D100FBADB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D2A15861DF801D100FBADB9 /* Assets.xcassets */; };
@@ -53,6 +53,10 @@
 
 /* Begin PBXFileReference section */
 		7D0A47101E07D44200681868 /* YHSSearch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YHSSearch.bundle; sourceTree = "<group>"; };
+		7D0A47121E07D8DF00681868 /* YHSSearchExampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHSSearchExampleController.h; sourceTree = "<group>"; };
+		7D0A47131E07D8DF00681868 /* YHSSearchExampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHSSearchExampleController.m; sourceTree = "<group>"; };
+		7D0A47141E07D8DF00681868 /* YHSSearchTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHSSearchTempViewController.h; sourceTree = "<group>"; };
+		7D0A47151E07D8DF00681868 /* YHSSearchTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHSSearchTempViewController.m; sourceTree = "<group>"; };
 		7D254D5B1DFA95DA005581D6 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		7D254D5C1DFA95DA005581D6 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		7D254D5D1DFA95DA005581D6 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -92,10 +96,6 @@
 		7D254D9A1DFA9798005581D6 /* YHSSearchExample-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YHSSearchExample-PrefixHeader.pch"; sourceTree = "<group>"; };
 		7D254D9C1DFA986B005581D6 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D254D9D1DFA986B005581D6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7D254D9E1DFA986B005581D6 /* YHSSearchExampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHSSearchExampleController.h; sourceTree = "<group>"; };
-		7D254D9F1DFA986B005581D6 /* YHSSearchExampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHSSearchExampleController.m; sourceTree = "<group>"; };
-		7D254DA51DFA9AAC005581D6 /* YHSSearchTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHSSearchTempViewController.h; sourceTree = "<group>"; };
-		7D254DA61DFA9AAC005581D6 /* YHSSearchTempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHSSearchTempViewController.m; sourceTree = "<group>"; };
 		7D2A15771DF801D100FBADB9 /* YHSSearchExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHSSearchExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2A157B1DF801D100FBADB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D2A15841DF801D100FBADB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -223,10 +223,6 @@
 			children = (
 				7D254D9C1DFA986B005581D6 /* AppDelegate.h */,
 				7D254D9D1DFA986B005581D6 /* AppDelegate.m */,
-				7D254D9E1DFA986B005581D6 /* YHSSearchExampleController.h */,
-				7D254D9F1DFA986B005581D6 /* YHSSearchExampleController.m */,
-				7D254DA51DFA9AAC005581D6 /* YHSSearchTempViewController.h */,
-				7D254DA61DFA9AAC005581D6 /* YHSSearchTempViewController.m */,
 			);
 			path = Entrance;
 			sourceTree = "<group>";
@@ -234,6 +230,10 @@
 		7D254DA41DFA9A87005581D6 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				7D0A47121E07D8DF00681868 /* YHSSearchExampleController.h */,
+				7D0A47131E07D8DF00681868 /* YHSSearchExampleController.m */,
+				7D0A47141E07D8DF00681868 /* YHSSearchTempViewController.h */,
+				7D0A47151E07D8DF00681868 /* YHSSearchTempViewController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -434,7 +434,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D254D7A1DFA95DA005581D6 /* NSArray+MASAdditions.m in Sources */,
-				7D254DA21DFA986B005581D6 /* YHSSearchExampleController.m in Sources */,
 				7D254D7C1DFA95DA005581D6 /* View+MASAdditions.m in Sources */,
 				7D254D771DFA95DA005581D6 /* MASLayoutConstraint.m in Sources */,
 				7D254D751DFA95DA005581D6 /* MASConstraint.m in Sources */,
@@ -442,6 +441,7 @@
 				7D254D741DFA95DA005581D6 /* MASCompositeConstraint.m in Sources */,
 				7D2A157C1DF801D100FBADB9 /* main.m in Sources */,
 				7D254D761DFA95DA005581D6 /* MASConstraintMaker.m in Sources */,
+				7D0A47171E07D8DF00681868 /* YHSSearchTempViewController.m in Sources */,
 				7D254D7D1DFA95DA005581D6 /* ViewController+MASAdditions.m in Sources */,
 				7D254D901DFA960A005581D6 /* YHSSearchViewController.m in Sources */,
 				7D254D8C1DFA960A005581D6 /* UIView+YHSExtension.m in Sources */,
@@ -449,7 +449,7 @@
 				7D254D8F1DFA960A005581D6 /* YHSSearchSuggestionViewController.m in Sources */,
 				7D254D791DFA95DA005581D6 /* MASViewConstraint.m in Sources */,
 				7D254DA11DFA986B005581D6 /* AppDelegate.m in Sources */,
-				7D254DA71DFA9AAC005581D6 /* YHSSearchTempViewController.m in Sources */,
+				7D0A47161E07D8DF00681868 /* YHSSearchExampleController.m in Sources */,
 				7D254D8B1DFA960A005581D6 /* UIColor+YHSExtension.m in Sources */,
 				7D254D781DFA95DA005581D6 /* MASViewAttribute.m in Sources */,
 			);
