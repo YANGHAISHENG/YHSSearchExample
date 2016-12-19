@@ -128,7 +128,7 @@
         UIImageView *line = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"YHSSearch.bundle/cell-content-line"]];
         line.yhs_height = 0.5;
         line.alpha = 0.7;
-        line.yhs_x = YHSMargin;
+        line.yhs_x = YHSSearchMargin;
         line.yhs_y = 43;
         line.yhs_width = YHSScreenW;
         [cell.contentView addSubview:line];

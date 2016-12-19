@@ -32,6 +32,7 @@
     self.tableSections = @[ @"选择热门搜索风格（搜索历史为默认风格）",
                             @"选择搜索历史风格（热门搜索为默认风格）" ];
     
+    
     self.tableData = @[ // 选择热门搜索风格
                        @[ @"YHSHotSearchStyleDefault",
                           @"YHSHotSearchStyleColorfulTag",
@@ -45,6 +46,7 @@
                           @"YHSSearchHistoryStyleColorfulTag",
                           @"YHSSearchHistoryStyleBorderTag",
                           @"YHSSearchHistoryStyleARCBorderTag"] ];
+    
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     
@@ -140,13 +142,13 @@
         // 根据条件发送查询（这里模拟搜索）
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{ // 搜素完毕
             // 显示建议搜索结果
-            NSMutableArray *searchSuggestionsM = [NSMutableArray array];
+            NSMutableArray *searchSuggestionsResult = [NSMutableArray array];
             for (int i = 0; i < arc4random_uniform(5) + 10; i++) {
                 NSString *searchSuggestion = [NSString stringWithFormat:@"搜索建议 %d", i];
-                [searchSuggestionsM addObject:searchSuggestion];
+                [searchSuggestionsResult addObject:searchSuggestion];
             }
             // 返回
-            searchViewController.searchSuggestions = searchSuggestionsM;
+            searchViewController.searchSuggestions = searchSuggestionsResult;
         });
     }
 }

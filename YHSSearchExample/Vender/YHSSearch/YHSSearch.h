@@ -9,12 +9,9 @@
 #ifndef YHSSearch_h
 #define YHSSearch_h
 
-
 #import <Foundation/Foundation.h>
 
-
 #import "YHSSearchViewController.h"
-
 
 #endif /* YHSSearch_h */
 

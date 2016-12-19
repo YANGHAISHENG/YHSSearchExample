@@ -19,7 +19,7 @@ CGFloat const NAVIGATION_BAR_HEIGHT = 44.0;                // 导航条高度(�
 NSString *const YHSSearchPlaceholderText = @"搜索内容";      // 搜索框的占位符（默认为 @"搜索内容"）
 NSString *const YHSHotSearchText = @"热门搜索";              // 热门搜索文本（默认为 @"热门搜索"）
 NSString *const YHSSearchHistoryText = @"搜索历史";          // 搜索历史文本（默认为 @"搜索历史"）
-NSString *const YHSEmptySearchHistoryText = @"清空搜索历史";  // 清空搜索历史文本（默认为 @"清空搜索历史"）
+NSString *const YHSClearSearchHistoryText = @"清空搜索历史";  // 清空搜索历史文本（默认为 @"清空搜索历史"）
 
 
 @end

@@ -12,7 +12,7 @@
 
 
 #define YHSRectangleTagMaxCol 3 // 矩阵标签时，最多列数
-#define YHSTextColor YHSColor(113, 113, 113)  // 文本字体颜色
+#define YHSTextColor YHSSearchColor(113, 113, 113)  // 文本字体颜色
 #define YHSColorPolRandomColor self.colorPol[arc4random_uniform((uint32_t)self.colorPol.count)] // 随机选取颜色池中的颜色
 
 
@@ -144,8 +144,8 @@
         [emptyButton setImage:[UIImage imageNamed:@"YHSSearch.bundle/empty"] forState:UIControlStateNormal];
         [emptyButton addTarget:self action:@selector(emptySearchHistoryDidClick) forControlEvents:UIControlEventTouchUpInside];
         [emptyButton sizeToFit];
-        emptyButton.yhs_width += YHSMargin;
-        emptyButton.yhs_height += YHSMargin;
+        emptyButton.yhs_width += YHSSearchMargin;
+        emptyButton.yhs_height += YHSSearchMargin;
         emptyButton.yhs_centerY = self.searchHistoryHeader.yhs_centerY;
         emptyButton.yhs_x = self.headerContentView.yhs_width - emptyButton.yhs_width;
         [self.headerContentView addSubview:emptyButton];
@@ -158,8 +158,8 @@
 {
     if (!_searchHistoryTagsContentView) {
         UIView *searchHistoryTagsContentView = [[UIView alloc] init];
-        searchHistoryTagsContentView.yhs_width = YHSScreenW - YHSMargin * 2;
-        searchHistoryTagsContentView.yhs_y = CGRectGetMaxY(self.hotSearchTagsContentView.frame) + YHSMargin;
+        searchHistoryTagsContentView.yhs_width = YHSScreenW - YHSSearchMargin * 2;
+        searchHistoryTagsContentView.yhs_y = CGRectGetMaxY(self.hotSearchTagsContentView.frame) + YHSSearchMargin;
         [self.headerContentView addSubview:searchHistoryTagsContentView];
         _searchHistoryTagsContentView = searchHistoryTagsContentView;
     }
@@ -255,12 +255,12 @@
     
     // 创建搜索框
     UIView *titleView = [[UIView alloc] init];
-    titleView.yhs_x = YHSMargin * 0.5;
+    titleView.yhs_x = YHSSearchMargin * 0.5;
     titleView.yhs_y = 7;
     titleView.yhs_width = self.view.yhs_width - 64 - titleView.yhs_x * 2;
     titleView.yhs_height = 30;
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:titleView.bounds];
-    searchBar.yhs_width -= YHSMargin * 1.5;
+    searchBar.yhs_width -= YHSSearchMargin * 1.5;
     searchBar.placeholder = YHSSearchPlaceholderText;
     searchBar.backgroundImage = [UIImage imageNamed:@"YHSSearch.bundle/clearImage"];
     searchBar.delegate = self;
@@ -271,8 +271,8 @@
     // 设置头部（热门搜索）
     UIView *headerView = [[UIView alloc] init];
     UIView *contentView = [[UIView alloc] init];
-    contentView.yhs_y = YHSMargin * 2;
-    contentView.yhs_x = YHSMargin * 1.5;
+    contentView.yhs_y = YHSSearchMargin * 2;
+    contentView.yhs_x = YHSSearchMargin * 1.5;
     contentView.yhs_width = YHSScreenW - contentView.yhs_x * 2;
     [headerView addSubview:contentView];
     UILabel *titleLabel = [self setupTitleLabel:YHSHotSearchText];
@@ -281,7 +281,7 @@
     // 创建热门搜索标签容器
     UIView *hotSearchTagsContentView = [[UIView alloc] init];
     hotSearchTagsContentView.yhs_width = contentView.yhs_width;
-    hotSearchTagsContentView.yhs_y = CGRectGetMaxY(titleLabel.frame) + YHSMargin;
+    hotSearchTagsContentView.yhs_y = CGRectGetMaxY(titleLabel.frame) + YHSSearchMargin;
     [contentView addSubview:hotSearchTagsContentView];
     self.hotSearchTagsContentView = hotSearchTagsContentView;
     self.headerContentView = contentView;
@@ -294,7 +294,7 @@
     emptySearchHistoryLabel.textColor = [UIColor darkGrayColor];
     emptySearchHistoryLabel.font = [UIFont systemFontOfSize:13];
     emptySearchHistoryLabel.userInteractionEnabled = YES;
-    emptySearchHistoryLabel.text = YHSEmptySearchHistoryText;
+    emptySearchHistoryLabel.text = YHSClearSearchHistoryText;
     emptySearchHistoryLabel.textAlignment = NSTextAlignmentCenter;
     emptySearchHistoryLabel.yhs_height = 30;
     [emptySearchHistoryLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(emptySearchHistoryDidClick)]];
@@ -328,7 +328,7 @@
     UIView *contentView = self.hotSearchTagsContentView;
     // 调整容器布局
     contentView.yhs_width = YHSScreenW;
-    contentView.yhs_x = -YHSMargin * 1.5;
+    contentView.yhs_x = -YHSSearchMargin * 1.5;
     contentView.yhs_y += 2;
     contentView.backgroundColor = [UIColor whiteColor];
     // 设置tableView背景颜色
@@ -360,7 +360,7 @@
     // 设置标签容器高度
     contentView.yhs_height = CGRectGetMaxY(contentView.subviews.lastObject.frame);
     // 设置tableHeaderView高度
-    self.baseSearchTableView.tableHeaderView.yhs_height  = self.headerContentView.yhs_height = CGRectGetMaxY(contentView.frame) + YHSMargin * 2;
+    self.baseSearchTableView.tableHeaderView.yhs_height  = self.headerContentView.yhs_height = CGRectGetMaxY(contentView.frame) + YHSSearchMargin * 2;
     // 添加分割线
     for (int i = 0; i < YHSRectangleTagMaxCol - 1; i++) { // 添加垂直分割线
         UIImageView *verticalLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"YHSSearch.bundle/cell-content-line-vertical"]];
@@ -397,7 +397,7 @@
         // 整体标签
         UIView *rankView = [[UIView alloc] init];
         rankView.yhs_height = 40;
-        rankView.yhs_width = (YHSScreenW - YHSMargin * 3) * 0.5;
+        rankView.yhs_width = (YHSScreenW - YHSSearchMargin * 3) * 0.5;
         [contentView addSubview:rankView];
         // 排名
         UILabel *rankTag = [[UILabel alloc] init];
@@ -407,7 +407,7 @@
         rankTag.clipsToBounds = YES;
         rankTag.text = [NSString stringWithFormat:@"%d", i + 1];
         [rankTag sizeToFit];
-        rankTag.yhs_width = rankTag.yhs_height += YHSMargin * 0.5;
+        rankTag.yhs_width = rankTag.yhs_height += YHSSearchMargin * 0.5;
         rankTag.yhs_y = (rankView.yhs_height - rankTag.yhs_height) * 0.5;
         [rankView addSubview:rankTag];
         [rankTagM addObject:rankTag];
@@ -420,8 +420,8 @@
         rankTextLabel.backgroundColor = [UIColor clearColor];
         rankTextLabel.textColor = YHSTextColor;
         rankTextLabel.font = [UIFont systemFontOfSize:14];
-        rankTextLabel.yhs_x = CGRectGetMaxX(rankTag.frame) + YHSMargin;
-        rankTextLabel.yhs_width = (YHSScreenW - YHSMargin * 3) * 0.5 - rankTextLabel.yhs_x;
+        rankTextLabel.yhs_x = CGRectGetMaxX(rankTag.frame) + YHSSearchMargin;
+        rankTextLabel.yhs_width = (YHSScreenW - YHSSearchMargin * 3) * 0.5 - rankTextLabel.yhs_x;
         rankTextLabel.yhs_height = rankView.yhs_height;
         [rankTextLabelsM addObject:rankTextLabel];
         [rankView addSubview:rankTextLabel];
@@ -462,13 +462,13 @@
     // 计算位置
     for (int i = 0; i < self.rankViews.count; i++) { // 每行两个
         UIView *rankView = self.rankViews[i];
-        rankView.yhs_x = (YHSMargin + rankView.yhs_width) * (i % 2);
+        rankView.yhs_x = (YHSSearchMargin + rankView.yhs_width) * (i % 2);
         rankView.yhs_y = rankView.yhs_height * (i / 2);
     }
     // 设置标签容器高度
     contentView.yhs_height = CGRectGetMaxY(self.rankViews.lastObject.frame);
     // 设置tableHeaderView高度
-    self.baseSearchTableView.tableHeaderView.yhs_height  = self.headerContentView.yhs_height = CGRectGetMaxY(contentView.frame) + YHSMargin * 2;
+    self.baseSearchTableView.tableHeaderView.yhs_height  = self.headerContentView.yhs_height = CGRectGetMaxY(contentView.frame) + YHSSearchMargin * 2;
     // 重新赋值，注意：当操作系统为iOS 9.x系列的tableHeaderView高度设置失效，需要重新设置tableHeaderView
     [self.baseSearchTableView setTableHeaderView:self.baseSearchTableView.tableHeaderView];
 }
@@ -495,9 +495,9 @@
     // 隐藏尾部清除按钮
     self.baseSearchTableView.tableFooterView = nil;
     // 添加搜索历史头部
-    self.searchHistoryHeader.yhs_y = self.hotSearches.count > 0 ? CGRectGetMaxY(self.hotSearchTagsContentView.frame) + YHSMargin * 1.5 : 0;
-    self.emptyButton.yhs_y = self.searchHistoryHeader.yhs_y - YHSMargin * 0.5;
-    self.searchHistoryTagsContentView.yhs_y = CGRectGetMaxY(self.emptyButton.frame) + YHSMargin;
+    self.searchHistoryHeader.yhs_y = self.hotSearches.count > 0 ? CGRectGetMaxY(self.hotSearchTagsContentView.frame) + YHSSearchMargin * 1.5 : 0;
+    self.emptyButton.yhs_y = self.searchHistoryHeader.yhs_y - YHSSearchMargin * 0.5;
+    self.searchHistoryTagsContentView.yhs_y = CGRectGetMaxY(self.emptyButton.frame) + YHSSearchMargin;
     // 添加和布局标签
     self.searchHistoryTags = [self addAndLayoutTagsWithTagsContentView:self.searchHistoryTagsContentView tagTexts:[self.searchHistories copy]];
 }
@@ -527,21 +527,21 @@
         UILabel *subView = contentView.subviews[i];
         // 当搜索字数过多，宽度为contentView的宽度
         if (subView.yhs_width > contentView.yhs_width) subView.yhs_width = contentView.yhs_width;
-        if (currentX + subView.yhs_width + YHSMargin * countRow > contentView.yhs_width) { // 得换行
+        if (currentX + subView.yhs_width + YHSSearchMargin * countRow > contentView.yhs_width) { // 得换行
             subView.yhs_x = 0;
-            subView.yhs_y = (currentY += subView.yhs_height) + YHSMargin * ++countCol;
+            subView.yhs_y = (currentY += subView.yhs_height) + YHSSearchMargin * ++countCol;
             currentX = subView.yhs_width;
             countRow = 1;
         } else { // 不换行
-            subView.yhs_x = (currentX += subView.yhs_width) - subView.yhs_width + YHSMargin * countRow;
-            subView.yhs_y = currentY + YHSMargin * countCol;
+            subView.yhs_x = (currentX += subView.yhs_width) - subView.yhs_width + YHSSearchMargin * countRow;
+            subView.yhs_y = currentY + YHSSearchMargin * countCol;
             countRow ++;
         }
     }
     // 设置contentView高度
     contentView.yhs_height = CGRectGetMaxY(contentView.subviews.lastObject.frame);
     // 设置头部高度
-    self.baseSearchTableView.tableHeaderView.yhs_height = self.headerContentView.yhs_height = CGRectGetMaxY(contentView.frame) + YHSMargin * 2;
+    self.baseSearchTableView.tableHeaderView.yhs_height = self.headerContentView.yhs_height = CGRectGetMaxY(contentView.frame) + YHSSearchMargin * 2;
     // 取消隐藏
     self.baseSearchTableView.tableHeaderView.hidden = NO;
     // 重新赋值, 注意：当操作系统为iOS 9.x系列的tableHeaderView高度设置失效，需要重新设置tableHeaderView
@@ -666,7 +666,7 @@
                 // 设置背景色为clearColor
                 tag.backgroundColor = [UIColor clearColor];
                 // 设置边框颜色
-                tag.layer.borderColor = YHSColor(223, 223, 223).CGColor;
+                tag.layer.borderColor = YHSSearchColor(223, 223, 223).CGColor;
                 // 设置边框宽度
                 tag.layer.borderWidth = 0.5;
             }
@@ -676,7 +676,7 @@
                 // 设置背景色为clearColor
                 tag.backgroundColor = [UIColor clearColor];
                 // 设置边框颜色
-                tag.layer.borderColor = YHSColor(223, 223, 223).CGColor;
+                tag.layer.borderColor = YHSSearchColor(223, 223, 223).CGColor;
                 // 设置边框宽度
                 tag.layer.borderWidth = 0.5;
                 // 设置边框弧度为圆弧
@@ -708,7 +708,7 @@
                 // 设置背景色为clearColor
                 tag.backgroundColor = [UIColor clearColor];
                 // 设置边框颜色
-                tag.layer.borderColor = YHSColor(223, 223, 223).CGColor;
+                tag.layer.borderColor = YHSSearchColor(223, 223, 223).CGColor;
                 // 设置边框宽度
                 tag.layer.borderWidth = 0.5;
             }
@@ -718,7 +718,7 @@
                 // 设置背景色为clearColor
                 tag.backgroundColor = [UIColor clearColor];
                 // 设置边框颜色
-                tag.layer.borderColor = YHSColor(223, 223, 223).CGColor;
+                tag.layer.borderColor = YHSSearchColor(223, 223, 223).CGColor;
                 // 设置边框宽度
                 tag.layer.borderWidth = 0.5;
                 // 设置边框弧度为圆弧
@@ -983,7 +983,7 @@
         UIImageView *line = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"YHSSearch.bundle/cell-content-line"]];
         line.yhs_height = 0.5;
         line.alpha = 0.7;
-        line.yhs_x = YHSMargin;
+        line.yhs_x = YHSSearchMargin;
         line.yhs_y = 43;
         line.yhs_width = YHSScreenW;
         [cell.contentView addSubview:line];
