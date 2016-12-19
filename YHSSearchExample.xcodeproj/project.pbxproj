@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0A47111E07D44200681868 /* YHSSearch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D0A47101E07D44200681868 /* YHSSearch.bundle */; };
 		7D254D741DFA95DA005581D6 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D5C1DFA95DA005581D6 /* MASCompositeConstraint.m */; };
 		7D254D751DFA95DA005581D6 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D5F1DFA95DA005581D6 /* MASConstraint.m */; };
 		7D254D761DFA95DA005581D6 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D254D611DFA95DA005581D6 /* MASConstraintMaker.m */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D0A47101E07D44200681868 /* YHSSearch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = YHSSearch.bundle; sourceTree = "<group>"; };
 		7D254D5B1DFA95DA005581D6 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		7D254D5C1DFA95DA005581D6 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		7D254D5D1DFA95DA005581D6 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		7D254D7E1DFA960A005581D6 /* YHSSearch */ = {
 			isa = PBXGroup;
 			children = (
+				7D0A47101E07D44200681868 /* YHSSearch.bundle */,
 				7D254D841DFA960A005581D6 /* YHSSearch.h */,
 				7D254D851DFA960A005581D6 /* YHSSearchConst.h */,
 				7D254D861DFA960A005581D6 /* YHSSearchConst.m */,
@@ -404,6 +407,7 @@
 			files = (
 				7D2A158A1DF801D100FBADB9 /* LaunchScreen.storyboard in Resources */,
 				7D2A15871DF801D100FBADB9 /* Assets.xcassets in Resources */,
+				7D0A47111E07D44200681868 /* YHSSearch.bundle in Resources */,
 				7D2A15851DF801D100FBADB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
