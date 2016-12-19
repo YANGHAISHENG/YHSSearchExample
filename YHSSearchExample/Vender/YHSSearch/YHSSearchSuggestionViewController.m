@@ -30,12 +30,15 @@
 }
 
 
+#pragma mark - LifeCycle
 /** 视图加载完毕 */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    // 取消分割线
+    // 表格设置
+    self.tableView.showsVerticalScrollIndicator = NO;
+    self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     // 监听键盘
@@ -72,7 +75,7 @@
 }
 
 
-#pragma mark - setter
+#pragma mark - Setter
 - (void)setSearchSuggestions:(NSArray<NSString *> *)searchSuggestions
 {
     _searchSuggestions = [searchSuggestions copy];
@@ -125,12 +128,12 @@
         cell.textLabel.font = [UIFont systemFontOfSize:14];
         cell.backgroundColor = [UIColor clearColor];
         // 添加分割线
-        UIImageView *line = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"YHSSearch.bundle/cell-content-line"]];
-        line.yhs_height = 0.5;
+        UIImageView *line = [[UIImageView alloc] initWithImage:YHSSearchSeparatorLineHorizontalImage];
         line.alpha = 0.7;
-        line.yhs_x = YHSSearchMargin;
-        line.yhs_y = 43;
-        line.yhs_width = YHSScreenW;
+        line.yhs_x = 0.0;
+        line.yhs_y = YHS_SEARCH_TABLE_VIEW_CELL_HEIGHT_DEFAULT-YHS_SEARCH_SEPARATOR_LINE_HEIGHT_DEFAULT;
+        line.yhs_width = YHSScreenWidth;
+        line.yhs_height = YHS_SEARCH_SEPARATOR_LINE_HEIGHT_DEFAULT;
         [cell.contentView addSubview:line];
     }
     // 设置数据
@@ -145,7 +148,7 @@
     if ([self.dataSource respondsToSelector:@selector(searchSuggestionView:heightForRowAtIndexPath:)]) {
         return [self.dataSource searchSuggestionView:tableView heightForRowAtIndexPath:indexPath];
     }
-    return 44.0;
+    return YHS_SEARCH_TABLE_VIEW_CELL_HEIGHT_DEFAULT;
 }
 
 
@@ -155,6 +158,7 @@
     // 取消选中
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    // 执行块Block
     if (self.didSelectCellBlock) {
         self.didSelectCellBlock([tableView cellForRowAtIndexPath:indexPath]);
     }

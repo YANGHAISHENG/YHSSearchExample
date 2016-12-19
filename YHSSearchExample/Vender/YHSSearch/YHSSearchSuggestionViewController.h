@@ -16,10 +16,10 @@ typedef void(^YHSSearchSuggestionDidSelectCellBlock)(UITableViewCell *selectedCe
 @protocol YHSSearchSuggestionViewDataSource <NSObject, UITableViewDataSource>
 
 @required
+/** 返回用户自定义搜索建议Cell的Rows */
+- (NSInteger)searchSuggestionView:(UITableView *)searchSuggestionView numberOfRowsInSection:(NSInteger)section;
 /** 返回用户自定义搜索建议Cell */
 - (UITableViewCell *)searchSuggestionView:(UITableView *)searchSuggestionView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-/** 返回用户自定义搜索建议cell的rows */
-- (NSInteger)searchSuggestionView:(UITableView *)searchSuggestionView numberOfRowsInSection:(NSInteger)section;
 
 @optional
 /** 返回用户自定义搜索建议Cell的Section */
@@ -40,6 +40,7 @@ typedef void(^YHSSearchSuggestionDidSelectCellBlock)(UITableViewCell *selectedCe
 @property (nonatomic, copy) YHSSearchSuggestionDidSelectCellBlock didSelectCellBlock;
 
 
+/** 创建搜索建议视图控制器ViewController  */
 + (instancetype)searchSuggestionViewControllerWithDidSelectCellBlock:(YHSSearchSuggestionDidSelectCellBlock)didSelectCellBlock;
 
 

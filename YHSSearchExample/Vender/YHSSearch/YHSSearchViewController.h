@@ -55,11 +55,11 @@ typedef NS_ENUM(NSInteger, YHSSearchResultShowMode) {
  */
 /** 返回用户自定义搜索建议Cell */
 - (UITableViewCell *)searchSuggestionView:(UITableView *)searchSuggestionView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-/** 返回用户自定义搜索建议cell的rows */
+/** 返回用户自定义搜索建议Cell的Rows */
 - (NSInteger)searchSuggestionView:(UITableView *)searchSuggestionView numberOfRowsInSection:(NSInteger)section;
-/** 返回用户自定义搜索建议cell的section */
+/** 返回用户自定义搜索建议Cell的Section */
 - (NSInteger)numberOfSectionsInSearchSuggestionView:(UITableView *)searchSuggestionView;
-/** 返回用户自定义搜索建议cell高度 */
+/** 返回用户自定义搜索建议Cell高度 */
 - (CGFloat)searchSuggestionView:(UITableView *)searchSuggestionView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 
@@ -68,11 +68,11 @@ typedef NS_ENUM(NSInteger, YHSSearchResultShowMode) {
  */
 /** 返回用户自定义搜索结果Cell */
 - (UITableViewCell *)searchResultView:(UITableView *)searchResultView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-/** 返回用户自定义搜索结果cell的rows */
+/** 返回用户自定义搜索结果Cell的Rows */
 - (NSInteger)searchResultView:(UITableView *)searchResultView numberOfRowsInSection:(NSInteger)section;
-/** 返回用户自定义搜索结果cell的section */
+/** 返回用户自定义搜索结果Cell的Section */
 - (NSInteger)numberOfSectionsInSearchSearchResultView:(UITableView *)searchSuggestionView;
-/** 返回用户自定义搜索结果cell高度 */
+/** 返回用户自定义搜索结果Cell高度 */
 - (CGFloat)searchResultView:(UITableView *)searchResultView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
@@ -84,11 +84,11 @@ typedef NS_ENUM(NSInteger, YHSSearchResultShowMode) {
 
 /** 点击(开始)搜索时调用 */
 - (void)searchViewController:(YHSSearchViewController *)searchViewController didSearchWithsearchBar:(UISearchBar *)searchBar searchText:(NSString *)searchText;
-/** 点击热门搜索时调用，如果实现该代理方法则点击热门搜索时searchViewController:didSearchWithsearchBar:searchText:失效*/
+/** 点击热门搜索时调用，如果实现该代理方法，则点击热门搜索时searchViewController:didSearchWithsearchBar:searchText:失效 */
 - (void)searchViewController:(YHSSearchViewController *)searchViewController didSelectHotSearchAtIndex:(NSInteger)index searchText:(NSString *)searchText;
-/** 点击搜索历史时调用，如果实现该代理方法则搜索历史时searchViewController:didSearchWithsearchBar:searchText:失效 */
+/** 点击搜索历史时调用，如果实现该代理方法，则搜索历史时searchViewController:didSearchWithsearchBar:searchText:失效 */
 - (void)searchViewController:(YHSSearchViewController *)searchViewController didSelectSearchHistoryAtIndex:(NSInteger)index searchText:(NSString *)searchText;
-/** 点击搜索建议时调用，如果实现该代理方法则点击搜索建议时searchViewController:didSearchWithsearchBar:searchText:失效 */
+/** 点击搜索建议时调用，如果实现该代理方法，则点击搜索建议时searchViewController:didSearchWithsearchBar:searchText:失效 */
 - (void)searchViewController:(YHSSearchViewController *)searchViewController didSelectSearchSuggestionAtIndex:(NSInteger)index searchText:(NSString *)searchText;
 /** 搜索框文本变化时，显示的搜索建议通过searchViewController的searchSuggestions赋值即可 */
 - (void)searchViewController:(YHSSearchViewController *)searchViewController searchTextDidChange:(UISearchBar *)seachBar searchText:(NSString *)searchText;
@@ -121,7 +121,7 @@ typedef NS_ENUM(NSInteger, YHSSearchResultShowMode) {
 
 /** 所有的搜索历史标签，只有当YHSSearchHistoryStyle != YHSSearchHistoryStyleCell才有值 */
 @property (nonatomic, copy) NSArray<UILabel *> *searchHistoryTags;
-/** 搜索历史标题,只有当YHSSearchHistoryStyle != YHSSearchHistoryStyleCell才有值 */
+/** 搜索历史标题，只有当YHSSearchHistoryStyle != YHSSearchHistoryStyleCell才有值 */
 @property (nonatomic, weak) UILabel *searchHistoryHeader;
 /** 搜索历史缓存保存路径, 默认为YHSSearchHistoriesPath(YHSSearchConst.h文件中的宏定义) */
 @property (nonatomic, copy) NSString *searchHistoriesCachePath;
@@ -153,6 +153,7 @@ typedef NS_ENUM(NSInteger, YHSSearchResultShowMode) {
 /** 搜索建议是否隐藏，默认为：NO */
 @property (nonatomic, assign) BOOL searchSuggestionHidden;
 
+
 /** 搜索结果控制器
  * 当searchResultShowMode == YHSSearchResultShowModePush时，
  * 将目的控制器给该属性赋值，即Push到searchResultController控制器
@@ -163,7 +164,7 @@ typedef NS_ENUM(NSInteger, YHSSearchResultShowMode) {
 
 
 /**
- * 快速创建PYSearchViewController对象
+ * 快速创建YHSSearchViewController对象
  *
  * hotSearches : 热门搜索数组
  * placeholder : searchBar占位文字
@@ -171,8 +172,9 @@ typedef NS_ENUM(NSInteger, YHSSearchResultShowMode) {
  */
 + (YHSSearchViewController *)searchViewControllerWithHotSearches:(NSArray<NSString *> *)hotSearches searchBarPlaceholder:(NSString *)placeholder;
 
+
 /**
- * 快速创建PYSearchViewController对象
+ * 快速创建YHSSearchViewController对象
  *
  * hotSearches : 热门搜索数组
  * placeholder : searchBar占位文字

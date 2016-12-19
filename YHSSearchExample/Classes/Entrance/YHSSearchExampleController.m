@@ -139,7 +139,7 @@
 - (void)searchViewController:(YHSSearchViewController *)searchViewController searchTextDidChange:(UISearchBar *)seachBar searchText:(NSString *)searchText
 {
     if (searchText.length) { // 与搜索条件再搜索
-        // 根据条件发送查询（这里模拟搜索）
+        // 根据条件发送查询（这里模拟搜索，延时0.25秒）
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{ // 搜素完毕
             // 显示建议搜索结果
             NSMutableArray *searchSuggestionsResult = [NSMutableArray array];
